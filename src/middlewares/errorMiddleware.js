@@ -3,8 +3,7 @@ function errorMiddleware(err, req, res, next) {
     console.error('[ERRO]:', err.stack);
     // Exibe o erro completo no console para depuração
     const statusCode = err.statusCode || 500;
-    // Define o código de status da resposta: usa o informado no erro ou 500
-   (erro interno) como padrão
+    // Define o código de status da resposta: usa o informado no erro ou 500 (erro interno) como padrão
     res.status(statusCode).json({
     error: err.message || 'Erro interno no servidor',
     status: statusCode,
